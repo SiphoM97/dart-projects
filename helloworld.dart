@@ -14,4 +14,6 @@ void main() {
   print ("here is the number 1 richest person in world ${names[0]}");
   print ("here is the number 2 richest person in world ${names[1]}");
 
+  Map<String, int> namess = {'pete': 45, 'Donald':56, 'Zach':27};
+  print(namess);
 }
