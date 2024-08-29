@@ -23,7 +23,7 @@ void main() {
   // Print the string
   print(runesString);
 
-  int num1 = 23;
+  int num1 = 24;
 int num2 = 222;
 
 int sum = num1 + num2;
