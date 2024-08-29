@@ -24,7 +24,7 @@ void main() {
   print(runesString);
 
   int num1 = 23;
-int num2 = 224;
+int num2 = 222;
 
 int sum = num1 + num2;
 int subtract = num2-num1;
