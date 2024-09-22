@@ -17,12 +17,12 @@ print(business.length);
 
 print(name[4]);
 
-// function for turning sstring to upper case and lower case
+// function for turning string to upper case and lower case
 
 print(name.toUpperCase());
 print(name.toLowerCase());
 
-// see if character is iside string
+// see if character is inside string
 
 print(business.indexOf("D"));
 
