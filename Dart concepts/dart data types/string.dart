@@ -1,5 +1,5 @@
-void main() {
-
+/*  void main() {
+first program.
   // Declaring the data types and variable
   String name = "Sipho";
   String business = "Hoja Digital";
@@ -36,5 +36,31 @@ print(business.indexOf("D"));
   print("The greeting of each language is ${greeting + greeting2}");
   var myname = "John";
   print("My name is $myname");
+
+  }
+*/
+
+
+void main() {
+
+  String soccer = "Real Madrid";
+  String rugby = "Springboks";
+  String basketBall = " LA Lakers";
+  String americanFootball = "Dolphins";
+
+  print(soccer.length); // length of the string
+
+  print(rugby.indexOf("p")); // find a character in string
+
+  print(basketBall[8]); // refer to a character in string
+
+  print(americanFootball.toUpperCase()); // string to uppercase
+
+  print(soccer.toLowerCase()); // String to lowercase
+
+  print("The highest valued teams are $soccer and $basketBall"); // Interpolation
+
+  print(basketBall +" " + soccer); // concatentation 
+
 
 }

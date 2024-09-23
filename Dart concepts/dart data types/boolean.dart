@@ -1,3 +1,4 @@
+/*
 void main() {
   
   bool millionaire = true;
@@ -12,4 +13,14 @@ void main() {
   print(7 < 8);
 
 
+}
+
+*/
+
+void main() {
+
+  bool southAfrica = true;
+  bool gold = false;
+
+  print("Its is $southAfrica South Africa is rich in minerals but its $gold that shouth africa has the highest gold reserves in the world");
 }
