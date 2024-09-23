@@ -1,11 +1,14 @@
 void main() {
-// Declaring Variables  
+
+/* Declaring Variables  
+
 int num1 = 100; // without decimal point.
 double num2 = 130.2; // with decimal point.
 num num3 = 50;
 num  num4 = 50.4;  
 
 // For Sum   
+
 num sum = num1 + num2 + num3 + num4;
    
 // Printing Info   
@@ -14,5 +17,28 @@ print("Num 2 is $num2");
 print("Num 3 is $num3");  
 print("Num 4 is $num4");  
 print("Sum is $sum");  
-   
+
+*/
+
+// interger variables 
+int age = 27;
+int year = 2024;
+
+// double variables
+
+double pi = 3.14;
+double mystery = 2.121212;
+
+// operations on numbers
+
+num birthdate = year - age; // subtration
+print("this fella was born in $birthdate");
+
+num decade = age + 10;
+print("in a decade this fella will be $decade"); // addition
+
+num halfAge = age / 2;
+print("if we halfed thus fellas age he would be $halfAge"); // division
+
+
 }
