@@ -1,10 +1,15 @@
 // function that prints name 
 
 void printName(){
-  print("HI my name is sipho");
+  print("Hi my name is sipho");
 }
 
 void main (){
 
   printName();
+  secondName();
+}
+
+void secondName (){
+  print("This is the second name");
 }

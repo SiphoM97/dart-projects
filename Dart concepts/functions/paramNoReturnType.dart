@@ -6,4 +6,14 @@ void findSum (int num1, int num2){
 void main (){
 
   findSum(20, 400);
+  printName("Jackson");
+}
+
+
+//Here printFullName is a function  With a parameter and no return type function that takes the name of the parameter
+
+// parameters and no return type
+
+void printName( String name ) {
+  print("My name is $name ");
 }
