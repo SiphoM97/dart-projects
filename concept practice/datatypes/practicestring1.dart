@@ -34,8 +34,12 @@ the uppercase and lowercase versions, the interpolated sentence, and the concate
 Implement basic error handling. For example, if the user inputs a number instead of a character for the search, 
 provide a warning message and prompt them to try again. */
 
+/*
 
 // My program below
+
+
+
 void main () {
 
   String enterSentence = "under such conditions ?"; // User must enter a sentence.
@@ -72,6 +76,8 @@ print("here is the final results of the effors we have made the first variable w
 
 
 }
+
+*/
 
 // optimized program by chatGpt below
 
@@ -126,3 +132,4 @@ void main() {
   // Final output
   print("Here is the final result: The original sentence was '$enterSentence'. We searched for the character '$searchCharacter'. The sentence length is $sentenceLength characters. The sentence in uppercase is '$uppercaseSentence', and in lowercase, it is '$lowercaseSentence'.");
 }
+

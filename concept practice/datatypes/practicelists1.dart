@@ -1,60 +1,74 @@
 /* 
-
-Exercise: To-Do List Manager
-You will create a simple to-do list manager where you can add, remove, and view tasks. The manager should have the following features:
+Exercise: Favorite Foods List
+You’ll create a simple program that manages a list of your favorite foods. This will involve adding, removing, and modifying items in the list.
 
 Requirements:
+- Initialize a List:
+Start with a list containing at least three of your favorite foods.
 
-- Initialize an Empty List:
-Start with an empty list to store your tasks.
+- Add a New Food:
+Prompt the user to add another favorite food to the list.
+Add this new food to the end of the list.
 
-- Add Tasks:
-Prompt the user to enter tasks and add them to the list.
-Allow the user to add multiple tasks, one at a time.
+- Remove a Food:
+Prompt the user to enter the name of a food to remove from the list.
+Remove the specified food from the list.
 
-- View Tasks:
-Display all the tasks in the list.
-Show the total number of tasks.
+- Replace a Food:
+Allow the user to replace one of the foods with a new one.
+Prompt the user to enter the position of the food to replace and the new food name.
 
-- Remove a Task:
-Allow the user to remove a task by specifying its position or name.
-If the task isn’t found, inform the user.
+- Display the List:
+After each operation (adding, removing, replacing), display the current list of favorite foods.
+Exit Option (Optional):
 
-- Check for Specific Tasks:
-Allow the user to check if a specific task is in the list.
-
-- Exit Option:
-Provide an option to exit the program.
-
-Example Flow:
-
-- Start Program:
-Initialize an empty list.
-Display a menu with options to add, view, remove tasks, or exit.
-
-- User Interaction:
-User chooses to add tasks.
-User enters tasks one by one.
-The program displays the list of tasks.
-The user can remove tasks or check if a task is in the list.
-The user can exit the program.
-Final Output:
-
-Display a final list of tasks before exiting.
+Provide an option for the user to exit the program. 
 
 */
 
 
+/*
+
+// My program below:
+void main () {
+
+  List favoriteFoodlist = ["Steak", "Ramen", "Burgers", "Ribs", "choclate"];
+  print(favoriteFoodlist);
+  favoriteFoodlist.add("Chips");
+  print(favoriteFoodlist);
+  favoriteFoodlist.remove("Steak");
+  print(favoriteFoodlist);
+}
+
+*/
+
+// Optimized program by chatgpt below.
+
 import 'dart:io';
 
 void main() {
-  print("Please enter tasks to complete below (separated by commas):"); 
-  String? input = stdin.readLineSync(); // Read user input
-  
-  if (input != null) {
-    List<String> toDoListManager = input.split(','); // Split the input into a list based on commas
-    print(toDoListManager); // Print the list to verify
-  } else {
-    print("No input provided.");
+  // Step 1: Initialize the list with favorite foods
+  List<String> favoriteFoodList = ["Steak", "Ramen", "Burgers", "Ribs", "Chocolate"];
+  print("Initial favorite food list: $favoriteFoodList");
+
+  // Step 2: Prompt the user to add a new favorite food
+  print("Please enter a food item to add to your favorite list:");
+  String? newFood = stdin.readLineSync();
+  if (newFood != null && newFood.isNotEmpty) {
+    favoriteFoodList.add(newFood);
   }
+  print("Updated favorite food list after adding: $favoriteFoodList");
+
+  // Step 3: Prompt the user to remove a favorite food
+  print("Please enter a food item to remove from your favorite list:");
+  String? removeFood = stdin.readLineSync();
+  if (removeFood != null && favoriteFoodList.contains(removeFood)) {
+    favoriteFoodList.remove(removeFood);
+  } else {
+    print("Food item not found in the list.");
+  }
+  print("Updated favorite food list after removing: $favoriteFoodList");
+
+  // Step 4: Display final list
+  print("Final favorite food list: $favoriteFoodList");
 }
