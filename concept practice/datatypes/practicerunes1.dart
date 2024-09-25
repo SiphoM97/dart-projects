@@ -1,3 +1,10 @@
+/*
+Challenge:
+Create a program that stores a string and converts it into its corresponding Unicode runes.
+Iterate over each character in the string and print its Unicode value.
+After that, print the original string from the list of runes (use the String.fromCharCodes() method).
+*/
+
 void main() {
   // Store a string
   String myString = "Hello, Dart!";
