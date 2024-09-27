@@ -21,8 +21,8 @@ Print the list of hobbies after each entry.
 
 - Using Maps:
 Store the user’s name, age, country, account type, and email notification preference in a map, where the key is the user’s detail (e.g., "Name") and the value is their input.
-Using a Rune:
 
+- Using a Rune:
 Print out the first character of the user’s name using Runes (the Unicode for the character).
 Handling a Null Value:
 
@@ -70,6 +70,37 @@ void main (){
   
   // Convert the user's string input to a boolean value
   bool emailChoice = emailNotifications?.toLowerCase() == 'true';
+
+  
+  // Prompt user to enter 3 hobbies and turn then into a list and print them after each entry.
+
+  // list to store hobbies
+
+  List<String> hobbies = [];
+
+  print("Enter your favorite hobby");
+  String? firstHobby = stdin.readLineSync();
+  hobbies.add(firstHobby!);
+  print("Your hobbies so far $hobbies");
+  
+  print("Enter your second favourite hobby");
+  String? secondHobbie = stdin.readLineSync();
+  hobbies.add(secondHobbie!);
+  print("Your hobbies so far $hobbies");
+  
+  print("Enter your last hobbie");
+  String? thirdHobbie = stdin.readLineSync();
+  hobbies.add(thirdHobbie!);
+  print("Your hobbies so far $hobbies");
+
+  
+  //storing user details in a map where the users details are the key and their input is the vlaue
+
+  Map<String , int> userKey = {
+
+
+  };
+
 
   
 
