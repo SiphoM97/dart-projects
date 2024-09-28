@@ -30,6 +30,7 @@ Allow the user to provide their phone number, but make this an optional field (u
 
 */
 
+ // My code below:
 import 'dart:io';
 
 void main (){
@@ -93,14 +94,6 @@ void main (){
   hobbies.add(thirdHobbie!);
   print("Your hobbies so far $hobbies");
 
-  
-  //storing user details in a map where the users details are the key and their input is the vlaue
-
-  Map<String , int> userKey = {
-
-
-  };
-
 
   
 
@@ -122,3 +115,95 @@ void main (){
   }
 
 }
+
+
+/* ChatGpt code below:
+
+import 'dart:io';
+
+void main() {
+  // Prompting the user for their name
+  print("Please enter your name:");
+  String? enteredName = stdin.readLineSync();
+  
+  // Prompting the user for their age and parsing it
+  print("Please enter your age:");
+  String? enteredAge = stdin.readLineSync();
+  int userAge = int.parse(enteredAge!);
+
+  // Check if the user is eligible to create an account
+  if (userAge < 18) {
+    print("Sorry, you're not eligible to create an account.");
+    return; // Exits the program if the user is not eligible
+  } else {
+    print("You're eligible to create an account!");
+  }
+
+  // Prompting the user for their country
+  print("Please enter your country:");
+  String? enteredCountry = stdin.readLineSync();
+
+  // Asking the user to choose an account type
+  print("Choose your account type: 1 for Basic, 2 for Premium, 3 for Admin");
+  String? accountType = stdin.readLineSync();
+  int chosenAccountType = int.parse(accountType!);
+  String accountTypeString;
+
+  // Using switch-case to handle account type selection
+  switch (chosenAccountType) {
+    case 1:
+      accountTypeString = "Basic";
+      break;
+    case 2:
+      accountTypeString = "Premium";
+      break;
+    case 3:
+      accountTypeString = "Admin";
+      break;
+    default:
+      accountTypeString = "Unknown";
+      break;
+  }
+  print("You've selected a $accountTypeString account.");
+
+  // Ask if the user would like to receive email notifications (true or false)
+  print("Would you like to receive email notifications? (true/false)");
+  String? emailNotifications = stdin.readLineSync();
+  bool emailChoice = emailNotifications?.toLowerCase() == 'true';
+
+  // Prompt user to enter 3 hobbies and store them in a list
+  List<String> hobbies = [];
+  for (int i = 1; i <= 3; i++) {
+    print("Enter hobby #$i:");
+    String? hobby = stdin.readLineSync();
+    hobbies.add(hobby!);
+    print("Hobby added: $hobby. Hobbies so far: $hobbies");
+  }
+
+  // Optional phone number (handling null)
+  print("Enter your phone number (optional):");
+  String? phoneNumber = stdin.readLineSync();
+  phoneNumber = phoneNumber == '' ? null : phoneNumber; // Handling optional input
+
+  // Using Runes to display the first character of the user's name
+  Runes firstCharacter = Runes(enteredName!.codeUnitAt(0).toString());
+  print("The first character of your name is: ${String.fromCharCode(firstCharacter.first)}");
+
+  // Storing user details in a Map
+  Map<String, dynamic> userDetails = {
+    "Name": enteredName,
+    "Age": userAge,
+    "Country": enteredCountry,
+    "Account Type": accountTypeString,
+    "Email Notifications": emailChoice,
+    "Phone Number": phoneNumber,
+    "Hobbies": hobbies
+  };
+
+  // Displaying all user details
+  print("\nUser Details:");
+  userDetails.forEach((key, value) {
+    print("$key: $value");
+  });
+}
+*/
