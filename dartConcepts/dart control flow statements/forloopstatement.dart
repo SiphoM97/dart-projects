@@ -1,7 +1,7 @@
 void main () {
 
-  int num = 21;
-  for(num; num <=70; num++)
+  int num = 1;
+  for(num; num <=30; num++)
   {
     print(num);
   } 
