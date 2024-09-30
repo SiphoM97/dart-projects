@@ -3,8 +3,8 @@ void main () {
   int num = 1;
   for(num; num <=30; num++)
   {
-    print(num);
-  } 
+    print("We have added 1 and the new total is $num");
+  }
 
   /*
     int num = 1;  
