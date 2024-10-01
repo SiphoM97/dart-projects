@@ -15,14 +15,30 @@ Bonus: Display the number of attempts the user made before guessing correctly.
 
 import 'dart:io';
 
-void main (){
+void main() {
+  int secretNumber = 17;
+  int attempts = 0; // To count the number of attempts
+  bool isCorrect = false;
 
-int secretNumber = 17;
-print("Guess the secret number");
+  // While loop continues until the user guesses the secret number
+  while (!isCorrect) {
+    print("Guess the secret number:");
 
-String? EnteredNumber = stdin.readLineSync();
+    String? enteredNumber = stdin.readLineSync();
+    int guessedNumber = int.parse(enteredNumber!);
 
-int guessedNumber = int.parse(EnteredNumber!);
+    attempts++; // Increment the attempts counter after each guess
 
+    if (guessedNumber == secretNumber) {
+      print("Congratulations! You guessed the secret number!");
+      isCorrect = true; // User guessed correctly, so we end the loop
+    } else if (guessedNumber < secretNumber) {
+      print("Too low! Try again.");
+    } else {
+      print("Too high! Try again.");
+    }
+  }
 
+  // After the loop, display the total number of attempts
+  print("You guessed the number in $attempts attempts.");
 }
