@@ -12,17 +12,21 @@ Challenge:
 
 import 'dart:io';
 
-void main(){
-  
-  
+void main() {
   int theNumber = 10;
-  print("Please enter a number");
+  int storedNumber; // Declare storedNumber outside the loop
 
-  String? enteredNumber = stdin.readLineSync();
-  int storedNumber = int.parse(enteredNumber!);
+  do {
+    print("Please enter a number");
+    String? enteredNumber = stdin.readLineSync();
+    storedNumber = int.parse(enteredNumber!); // Update storedNumber
 
-  while (storedNumber !== theNumber){
-    print('Please enter a number');
-  }
+    if (storedNumber != theNumber) {
+      print('Try again!');
+    }
+
+  } while (storedNumber != theNumber);
+
+  print('You got it!');
 }
 
