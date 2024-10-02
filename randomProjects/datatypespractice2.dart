@@ -65,21 +65,49 @@ favouriteColours.add(thirdColour!); // add the users favourite colour to the lsi
   // Set boolean subscribed based on the user's input (y or n)
   bool subscribed = (newsLetter?.toLowerCase() == 'y'); 
 
+  // Use a rune to store the Unicode for the first letter of the user's name.
 
 
+  int firstLetterUnicode = Name.runes.first;
+
+  // Store all of the user’s details (name, age, country, favorite colors, 
+  //and newsletter subscription status) in a map where the 
+  //keys are descriptive strings and the values are the actual user inputs.
+
+  Map<String, dynamic> userDetailsSummary = {
+
+    'Name' : Name,
+    'Age'  : age,
+    'Country' : country,
+    'favourite colour' : favouriteColours
 
 
-  // printing the outoputs
-  print("|--------------------------------------------------------------------------------------------------------------|");
-  print("The users name is $Name");
-  print("The users age is $age");
-  print("The users country is $country");
-  print("The users favourite colours are $favouriteColours");
-    if (subscribed) {
+  };
+
+  // Output with lines between sections
+  print("--------------------------------------------------------------------------------------------------------------");
+  
+  print("The user's name is: $Name");
+  print("--------------------------------------------------------------------------------------------------------------");
+  
+  print("The user's age is: $age");
+  print("--------------------------------------------------------------------------------------------------------------");
+  
+  print("The user's country is: $country");
+  print("--------------------------------------------------------------------------------------------------------------");
+  
+  print("The user's favourite colours are: $favouriteColours");
+  print("--------------------------------------------------------------------------------------------------------------");
+  
+  if (subscribed) {
     print("$Name is subscribed to receive our newsletter!");
   } else {
     print("$Name is not subscribed to receive our newsletter.");
   }
+  print("--------------------------------------------------------------------------------------------------------------");
 
+  print("The Unicode value of the first letter of the name is: $firstLetterUnicode");
+  print("--------------------------------------------------------------------------------------------------------------");
+  print(" Here is a sumamry of user details: $userDetailsSummary");
 
 } 
