@@ -66,39 +66,46 @@ void main()
     print("You ordered the Small");
     break;
     case 2:
-    print("Yo order the medium");
+    print("You ordered the Medium");
     break;
     case 3:
-    print("You ordered the large");
+    print("You ordered the Large");
     default:
     print("you did not select a relevent size");
     break;
   }
 
-List<String> toppings = ["Pepperoni", "Mushrooms", "Onions", "Extra Cheese"]; // List of toppings menu to choose from
+
+List<String> toppings = ["pepperoni", "mushrooms", "onions", "extra Cheese"]; // List of toppings menu to choose from
 List<String> selectedToppings = []; // List of toppings selected.
+
 
 print("choose your first topping: $toppings"); // prompting to type in first topping.
 String? firstToppingEntered = stdin.readLineSync();
 
+
 selectedToppings.add(firstToppingEntered!); // adding topping to the users selected toppings list
 toppings.remove(firstToppingEntered); // removing the toppings the user selected to leave updated list.
+
 
 print("choose your second topping: $toppings"); // prompting to type in second topping.
 String? secondToppingEntered = stdin.readLineSync();
 
+
 selectedToppings.add(secondToppingEntered!); // adding topping to the users selected toppings list
 toppings.remove(secondToppingEntered); // removing the toppings the user selected to leave updated list.
 
+
 print("choose your third topping: $toppings"); // prompting to type in first topping.
 String? thirdToppingEntered = stdin.readLineSync();
+
 
 selectedToppings.add(thirdToppingEntered!); // adding topping to the users selected toppings list
 toppings.remove(thirdToppingEntered); // removing the toppings the user selected to leave updated list.
 
 
-
-  
+print("You choose to add these toppings to your pizza \n $selectedToppings"); // print the list of toppings he chose.
 
 
 }
+
