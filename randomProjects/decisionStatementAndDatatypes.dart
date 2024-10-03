@@ -82,6 +82,7 @@ List<String> selectedToppings = []; // List of toppings selected.
 
 print("choose your first topping: $toppings"); // prompting to type in first topping.
 String? firstToppingEntered = stdin.readLineSync();
+firstToppingEntered = firstToppingEntered?.toLowerCase(); // Convert the entered topping to lowercase and assign it back.
 
 
 selectedToppings.add(firstToppingEntered!); // adding topping to the users selected toppings list
