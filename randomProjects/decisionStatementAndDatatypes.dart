@@ -80,8 +80,8 @@ List<String> toppings = ["pepperoni", "mushrooms", "onions", "extra Cheese"]; //
 List<String> selectedToppings = []; // List of toppings selected.
 
 
-print("choose your first topping: $toppings"); // prompting to type in first topping.
-String? firstToppingEntered = stdin.readLineSync();
+print("choose your first topping: $toppings"); // prompting to type in first topping. 1
+String? firstToppingEntered = stdin.readLineSync(); // capture user input
 firstToppingEntered = firstToppingEntered?.toLowerCase(); // Convert the entered topping to lowercase and assign it back.
 
 
@@ -89,16 +89,17 @@ selectedToppings.add(firstToppingEntered!); // adding topping to the users selec
 toppings.remove(firstToppingEntered); // removing the toppings the user selected to leave updated list.
 
 
-print("choose your second topping: $toppings"); // prompting to type in second topping.
-String? secondToppingEntered = stdin.readLineSync();
-
+print("choose your second topping: $toppings"); // prompting to type in second topping. 2
+String? secondToppingEntered = stdin.readLineSync(); // capture user input
+secondToppingEntered = secondToppingEntered?.toLowerCase(); // Convert the entered topping to lowercase and assign it back.
 
 selectedToppings.add(secondToppingEntered!); // adding topping to the users selected toppings list
 toppings.remove(secondToppingEntered); // removing the toppings the user selected to leave updated list.
 
 
-print("choose your third topping: $toppings"); // prompting to type in first topping.
-String? thirdToppingEntered = stdin.readLineSync();
+print("choose your third topping: $toppings"); // prompting to type in third topping. 3
+String? thirdToppingEntered = stdin.readLineSync(); // capture user input
+thirdToppingEntered = thirdToppingEntered?.toLowerCase(); // Convert the entered topping to lowercase and assign it back.
 
 
 selectedToppings.add(thirdToppingEntered!); // adding topping to the users selected toppings list
@@ -107,6 +108,25 @@ toppings.remove(thirdToppingEntered); // removing the toppings the user selected
 
 print("You choose to add these toppings to your pizza \n $selectedToppings"); // print the list of toppings he chose.
 
+if (orderNumber == 1){
+  print("We currently have a special with a diet coke for this pizza size!");
+} else if (orderNumber == 2){
+  print("We currently have a special with with extra sides for this pizza size!");
+} else if (orderNumber == 3){
+  print("We currently have a special with 2 extra sides for this pizza size!");
+}
 
+Map<String , dynamic> orderSummary = {
+  "Customer name": Name, 
+  "Customer Age": Age, 
+  "Ordered pizza size": pizzaSize, 
+  "Ordered toppings": selectedToppings, 
+  };
+
+  if (Age <= 18){
+    print("The user is below 18 and qualifies for a discount");
+  } else if(Age > 18){
+    print("The user is above 18 and unfortunatelt doesnt qualify for a discount");
+  }
 }
 
