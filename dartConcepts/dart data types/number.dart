@@ -40,5 +40,7 @@ print("in a decade this fella will be $decade"); // addition
 num halfAge = age / 2;
 print("if we halfed thus fellas age he would be $halfAge"); // division
 
+print(mystery);
+
 
 }

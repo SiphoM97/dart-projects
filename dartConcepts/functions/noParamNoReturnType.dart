@@ -7,9 +7,9 @@ void printName(){
 void main (){
 
   printName();
-  secondName();
+  secondName("Barry");
 }
 
-void secondName (){
-  print("This is the second name");
+void secondName (String name){
+  print("second name is $name");
 }
