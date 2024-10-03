@@ -108,13 +108,6 @@ toppings.remove(thirdToppingEntered); // removing the toppings the user selected
 
 print("You choose to add these toppings to your pizza \n $selectedToppings"); // print the list of toppings he chose.
 
-if (orderNumber == 1){
-  print("We currently have a special with a diet coke for this pizza size!");
-} else if (orderNumber == 2){
-  print("We currently have a special with with extra sides for this pizza size!");
-} else if (orderNumber == 3){
-  print("We currently have a special with 2 extra sides for this pizza size!");
-}
 
 Map<String , dynamic> orderSummary = {
   "Customer name": Name, 
@@ -123,10 +116,172 @@ Map<String , dynamic> orderSummary = {
   "Ordered toppings": selectedToppings, 
   };
 
+
+
+  // Printing the order details:
+
+  print("______________________________________________________________________________________________________________");
+  print("Customer name : $Name");
+  print("______________________________________________________________________________________________________________");
+  print("Customer Age: $Age");
+  print("______________________________________________________________________________________________________________");
+  print("Customer order (y /n ): $pizzaResponse");
+  print("______________________________________________________________________________________________________________");
+  print("Pizza size ordered: $pizzaSize");
+  print("______________________________________________________________________________________________________________");
+  print("Toppings Added to pizza: $selectedToppings");
+  print("______________________________________________________________________________________________________________");
+  if (orderNumber == 1){
+  print("We currently have a special with a diet coke for this pizza size!");
+} else if (orderNumber == 2){
+  print("We currently have a special with with extra sides for this pizza size!");
+} else if (orderNumber == 3){
+  print("We currently have a special with 2 extra sides for this pizza size!");
+}
+print("______________________________________________________________________________________________________________");
   if (Age <= 18){
     print("The user is below 18 and qualifies for a discount");
   } else if(Age > 18){
     print("The user is above 18 and unfortunatelt doesnt qualify for a discount");
   }
+  print("______________________________________________________________________________________________________________");
+  print("For the kithen here is the summary: $orderSummary");
+
+/* 
+// chat Gpt optimized version of code;
+
+import 'dart:io';
+
+void main() {
+  // Step 1: Collect User's Name and Age
+  print("What's your name?");
+  String? enteredName = stdin.readLineSync();
+  
+  if (enteredName == null || enteredName.isEmpty) {
+    print("Name cannot be empty. Please restart.");
+    return;  // Exits the program if name is not provided
+  }
+  
+  String name = enteredName;
+
+  print("How old are you?");
+  String? enteredAge = stdin.readLineSync();
+  
+  if (enteredAge == null || enteredAge.isEmpty) {
+    print("Age cannot be empty. Please restart.");
+    return;
+  }
+  
+  int age = int.parse(enteredAge);
+
+  // Step 2: Ask if they want to order a pizza
+  print("Do you want to order a pizza? (y/n)");
+  String? orderResponse = stdin.readLineSync()?.toLowerCase();
+
+  if (orderResponse != 'y' && orderResponse != 'n') {
+    print("Invalid input. Please enter 'y' or 'n'.");
+    return;
+  }
+
+  if (orderResponse == 'n') {
+    print("You chose not to order a pizza.");
+    return;  // Exits if the user doesn’t want to order pizza
+  }
+
+  // Step 3: Ask for pizza size
+  print("What size pizza would you like? Enter the number:\n1. Small\n2. Medium\n3. Large");
+  String? sizeSelected = stdin.readLineSync();
+  
+  if (sizeSelected == null || sizeSelected.isEmpty) {
+    print("Please select a valid size.");
+    return;
+  }
+  
+  int pizzaSize = int.parse(sizeSelected);
+  String pizzaSizeText = '';
+
+  // Step 4: Switch case for pizza size
+  switch (pizzaSize) {
+    case 1:
+      pizzaSizeText = "Small";
+      print("You ordered the Small pizza.");
+      break;
+    case 2:
+      pizzaSizeText = "Medium";
+      print("You ordered the Medium pizza.");
+      break;
+    case 3:
+      pizzaSizeText = "Large";
+      print("You ordered the Large pizza.");
+      break;
+    default:
+      print("Invalid size selected. Please restart.");
+      return;  // Exits if invalid pizza size is selected
+  }
+
+  // Step 5: Toppings selection
+  List<String> toppings = ["Pepperoni", "Mushrooms", "Onions", "Extra Cheese"];
+  List<String> selectedToppings = [];
+
+  // Use a loop to select toppings up to 3 times
+  for (int i = 1; i <= 3; i++) {
+    print("Choose topping $i from the following list: $toppings");
+    String? toppingEntered = stdin.readLineSync();
+    
+    if (toppingEntered == null || toppingEntered.isEmpty) {
+      print("Invalid topping input. Please restart.");
+      return;
+    }
+    
+    toppingEntered = toppingEntered.toLowerCase();
+    if (toppings.contains(toppingEntered.capitalize())) {
+      selectedToppings.add(toppingEntered.capitalize());
+      toppings.remove(toppingEntered.capitalize());
+    } else {
+      print("Invalid topping selected. Please choose from the list.");
+      i--;  // Redo the current selection if invalid topping is chosen
+    }
+  }
+
+  print("You chose the following toppings: $selectedToppings");
+
+  // Step 6: Check for discount based on age
+  bool isDiscountEligible = age < 18;
+  if (isDiscountEligible) {
+    print("You are eligible for a discount!");
+  } else {
+    print("You are not eligible for a discount.");
+  }
+
+  // Step 7: Rune to display Unicode for the first letter of the name
+  int firstLetterUnicode = name.runes.first;
+  print("The Unicode of the first letter of your name is: $firstLetterUnicode");
+
+  // Step 8: Store order details in a map
+  Map<String, dynamic> orderSummary = {
+    "Customer Name": name,
+    "Customer Age": age,
+    "Pizza Size": pizzaSizeText,
+    "Toppings": selectedToppings,
+    "Discount Eligible": isDiscountEligible,
+  };
+
+  // Step 9: Display the final order summary
+  print("----- Order Summary -----");
+  orderSummary.forEach((key, value) {
+    print("$key: $value");
+  });
+}
+
+// Helper extension method to capitalize the first letter of a string
+extension StringExtension on String {
+  String capitalize() {
+    if (this.isEmpty) return "";
+    return "${this[0].toUpperCase()}${this.substring(1).toLowerCase()}";
+  }
+}
+
+*/
+
 }
 
