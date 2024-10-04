@@ -22,7 +22,11 @@ business.forEach((business) {
   print(business);
 });
 
+// arrow function.
 
+int add(int x, int y) => x + y;
+int result = add(44 , 64);
 
+print(result);
 }
 
