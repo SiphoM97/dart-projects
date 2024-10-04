@@ -28,5 +28,11 @@ int add(int x, int y) => x + y;
 int result = add(44 , 64);
 
 print(result);
+
+double dec(double a, double b) => a * b;
+double multi = dec(1.543, 3.145);
+
+print(multi);
+
 }
 
