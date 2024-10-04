@@ -66,12 +66,12 @@ void discount(int a , int b){
 
 discount(23, 23);
 
-// **Yes Parameters, Yes Return Type:** //
+/* **Yes Parameters, Yes Return Type:** 
 
 int price( int x , int y ){
   print(x * y);
 }
-
+*/
 
 
 
