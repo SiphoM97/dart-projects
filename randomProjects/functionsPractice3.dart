@@ -58,10 +58,19 @@ cartItems();
 print(cartItems());
 
 
+// **Yes Parameters, No Return Type:**
 
+void discount(int a , int b){
+  print(a + b);
+}
 
+discount(23, 23);
 
+// **Yes Parameters, Yes Return Type:** //
 
+int price( int x , int y ){
+  print(x * y);
+}
 
 
 
