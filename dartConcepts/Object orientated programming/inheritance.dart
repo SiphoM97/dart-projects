@@ -13,7 +13,7 @@ class Vehicle {
   }
 }
 
-// Derived class (Subclass) inheriting from Vehicle
+// Derived class (Subclass) inheriting from Vehicle...
 class Car extends Vehicle {
   String model;
 
