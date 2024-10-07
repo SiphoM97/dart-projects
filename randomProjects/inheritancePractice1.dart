@@ -7,6 +7,7 @@ class Dog{
   int age;
   String gender;
 
+// Constructor. 
   Dog(this.breed,this.age,this.owner,this.gender);
 
   void displayInfo(){
@@ -16,8 +17,13 @@ class Dog{
     print("The dogs gender is: $gender");
   }
 
-  class Animal extends Dog{
+  
+}
 
+class Animal extends Dog {
+
+    String food;
+
+    Animal(String breed,String owner,int age,String gender, this.food) : super(breed,age,owner,gender);
     
   }
-}
