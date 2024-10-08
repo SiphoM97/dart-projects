@@ -1,13 +1,15 @@
+import 'dart:math';
+
 class Circle {
   // Private property with underscore (_)
   double _radius;
-
+   
   // Constructor to initialize the radius
   Circle(this._radius);
 
   // Getter method to access the private radius
   double get radius => _radius;
-
+double get area => 2* pi * _radius;
   // Setter method to update the radius with validation
   set radius(double value) {
     if (value > 0) {
@@ -19,6 +21,7 @@ class Circle {
 
   // Method to calculate area of the circle
   double calculateArea() {
+    _radius=15;
     return 3.1416 * _radius * _radius; // Area = πr²
   }
 }
@@ -28,7 +31,9 @@ void main() {
   Circle circle = Circle(5.0);
 
   // Accessing the radius using getter
-  print("Initial radius: ${circle.radius}");
+  print("Initial radius: ${circle.area}");
+ 
+  
 
   // Calculating and printing the area
   print("Initial area: ${circle.calculateArea()}");
