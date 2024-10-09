@@ -1,0 +1,10 @@
+name: Date_and_time.dart
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+  
+dependencies:
+  flutter:
+    sdk: flutter
+  intl: ^0.17.0  # Add your intl package version here
+
+
