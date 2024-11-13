@@ -58,16 +58,23 @@ import 'dart:io';
 // Ensure your program does not crash if given unexpected inputs (e.g., letters where numbers are expected).
 // //
 void main() {
-  Map<String, dynamic> contacts = {
-
-    "John": dataContacts,
-    "Mark": ,
-    "Sbuda": ,  
-    };
-
-Map<String, int, bool> dataContacts = {
-  "example1@gmail.com": 078182955, false,
-
+Map<String, Map<String, dynamic>> contacts = {
+  "John": {
+    "email": "john@example.com",
+    "phone": "078182955",
+    "favorite": true,
+  },
+  "Mark": {
+    "email": "mark@example.com",
+    "phone": "012345678",
+    "favorite": false,
+  },
+  "Sbuda": {
+    "email": "sbuda@example.com",
+    "phone": "0987654321",
+    "favorite": true,
+  },
+};
 
 
 }; // contacts for contact list in order of Email, Phone number 
