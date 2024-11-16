@@ -69,6 +69,11 @@ void main() {
       "phone": "012345678",
       "favorite": false,
     },
+    "Sbuda": {
+      "email": "sbuda@example.com",
+      "phone": "0987654321",
+      "favorite": true,
+    },
   };
 } // contacts for contact list in order of Email, Phone number 
 
