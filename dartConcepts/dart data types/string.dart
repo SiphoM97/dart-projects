@@ -40,27 +40,24 @@ print(business.indexOf("D"));
   }
 */
 
-
 void main() {
-
   String soccer = "Real Madrid";
   String rugby = "Springboks";
-  String basketBall = " LA Lakers";
+  String basketBall = "LA Lakers";
   String americanFootball = "Dolphins";
 
-  print(soccer.length); // length of the string
+  print(soccer.length); // Length of the string
 
-  print(rugby.indexOf("p")); // find a character in string
+  print(rugby.indexOf("p")); // Find a character in string
 
-  print(basketBall[8]); // refer to a character in string
+  print(basketBall[8]); // Refer to a character in string
 
-  print(americanFootball.toUpperCase()); // string to uppercase
+  print(americanFootball.toUpperCase()); // String to uppercase
 
   print(soccer.toLowerCase()); // String to lowercase
 
-  print("The highest valued teams are $soccer and $basketBall"); // Interpolation
+  print(
+      "The highest valued teams are $soccer and $basketBall"); // Interpolation
 
-  print(basketBall +" " + soccer); // concatentation 
-
-
+  print(basketBall + " " + soccer); // Concatentation
 }
