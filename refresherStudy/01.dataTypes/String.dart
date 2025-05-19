@@ -26,5 +26,19 @@ void main() {
   print(Business_Name.indexOf("D"));
   print(Business_Operation.indexOf("f"));
 
-//
+// Refer to a character in the string
+
+  print(Personal_Name[5]);
+  print(Business_Name[3]);
+  print(Business_Operation[1]);
+// string to uppercase
+
+  print(Personal_Name.toUpperCase());
+  print(Business_Name.toUpperCase());
+  print(Business_Operation.toUpperCase());
+
+// String to Lowercase
+  print(Personal_Name.toLowerCase());
+  print(Business_Name.toLowerCase());
+  print(Business_Operation.toLowerCase());
 }
