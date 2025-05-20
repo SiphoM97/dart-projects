@@ -1,0 +1,97 @@
+Flutter crash report.
+Please report a bug at https://github.com/flutter/flutter/issues.
+
+## command
+
+flutter pub get
+
+## exception
+
+FileSystemException: FileSystemException: Cannot open file, path = '/Users/siphosetumzayiya/Desktop/dartProjects/.dart_tool/version' (OS Error: Operation timed out, errno = 60)
+
+```
+#0      _File.throwIfError (dart:io/file_impl.dart:675:7)
+#1      _File.openSync (dart:io/file_impl.dart:490:5)
+#2      _File.writeAsBytesSync (dart:io/file_impl.dart:644:31)
+#3      _File.writeAsStringSync (dart:io/file_impl.dart:668:5)
+#4      ForwardingFile.writeAsStringSync (package:file/src/forwarding/forwarding_file.dart:150:16)
+#5      ErrorHandlingFile.writeAsStringSync.<anonymous closure> (package:flutter_tools/src/base/error_handling_io.dart:279:22)
+#6      _runSync (package:flutter_tools/src/base/error_handling_io.dart:600:14)
+#7      ErrorHandlingFile.writeAsStringSync (package:flutter_tools/src/base/error_handling_io.dart:278:5)
+#8      _DefaultPub._updateVersionAndPackageConfig (package:flutter_tools/src/dart/pub.dart:660:17)
+#9      _DefaultPub.interactively (package:flutter_tools/src/dart/pub.dart:538:13)
+<asynchronous suspension>
+#10     PackagesGetCommand.runCommand (package:flutter_tools/src/commands/packages.dart:346:7)
+<asynchronous suspension>
+#11     FlutterCommand.run.<anonymous closure> (package:flutter_tools/src/runner/flutter_command.dart:1408:27)
+<asynchronous suspension>
+#12     AppContext.run.<anonymous closure> (package:flutter_tools/src/base/context.dart:153:19)
+<asynchronous suspension>
+#13     CommandRunner.runCommand (package:args/command_runner.dart:212:13)
+<asynchronous suspension>
+#14     FlutterCommandRunner.runCommand.<anonymous closure> (package:flutter_tools/src/runner/flutter_command_runner.dart:420:9)
+<asynchronous suspension>
+#15     AppContext.run.<anonymous closure> (package:flutter_tools/src/base/context.dart:153:19)
+<asynchronous suspension>
+#16     FlutterCommandRunner.runCommand (package:flutter_tools/src/runner/flutter_command_runner.dart:364:5)
+<asynchronous suspension>
+#17     run.<anonymous closure>.<anonymous closure> (package:flutter_tools/runner.dart:130:9)
+<asynchronous suspension>
+#18     AppContext.run.<anonymous closure> (package:flutter_tools/src/base/context.dart:153:19)
+<asynchronous suspension>
+#19     main (package:flutter_tools/executable.dart:93:3)
+<asynchronous suspension>
+```
+
+## flutter doctor
+
+```
+[✓] Flutter (Channel stable, 3.24.4, on macOS 15.4.1 24E263 darwin-arm64, locale en-ZA)
+    • Flutter version 3.24.4 on channel stable at /Users/siphosetumzayiya/Downloads/flutter
+    • Upstream repository https://github.com/flutter/flutter.git
+    • Framework revision 603104015d (7 months ago), 2024-10-24 08:01:25 -0700
+    • Engine revision db49896cf2
+    • Dart version 3.5.4
+    • DevTools version 2.37.3
+
+[✓] Android toolchain - develop for Android devices (Android SDK version 35.0.0)
+    • Android SDK at /Users/siphosetumzayiya/Library/Android/sdk
+    • Platform android-35, build-tools 35.0.0
+    • Java binary at: /opt/homebrew/opt/openjdk@21/bin/java
+    • Java version OpenJDK Runtime Environment Homebrew (build 21.0.5)
+    • All Android licenses accepted.
+
+[✓] Xcode - develop for iOS and macOS (Xcode 16.3)
+    • Xcode at /Applications/Xcode.app/Contents/Developer
+    • Build 16E140
+    • CocoaPods version 1.16.2
+
+[✓] Chrome - develop for the web
+    • Chrome at /Applications/Google Chrome.app/Contents/MacOS/Google Chrome
+
+[✓] Android Studio (version 2024.2)
+    • Android Studio at /Applications/Android Studio.app/Contents
+    • Flutter plugin can be installed from:
+      🔨 https://plugins.jetbrains.com/plugin/9212-flutter
+    • Dart plugin can be installed from:
+      🔨 https://plugins.jetbrains.com/plugin/6351-dart
+    • Java version OpenJDK Runtime Environment (build 21.0.3+-79915917-b509.11)
+
+[✓] VS Code (version 1.72.1)
+    • VS Code at /Users/siphosetumzayiya/Downloads/Visual Studio Code.app/Contents
+    • Flutter extension version 3.60.0
+
+[✓] Connected device (3 available)
+    • macOS (desktop)                 • macos                 • darwin-arm64   • macOS 15.4.1 24E263 darwin-arm64
+    • Mac Designed for iPad (desktop) • mac-designed-for-ipad • darwin         • macOS 15.4.1 24E263 darwin-arm64
+    • Chrome (web)                    • chrome                • web-javascript • Google Chrome 136.0.7103.114
+
+[!] Network resources
+    ✗ A network error occurred while checking "https://pub.dev/": Failed host lookup: 'pub.dev'
+    ✗ A network error occurred while checking "https://storage.googleapis.com/": Failed host lookup: 'storage.googleapis.com'
+    ✗ A network error occurred while checking "https://maven.google.com/": Failed host lookup: 'maven.google.com'
+    ✗ A network error occurred while checking "https://cocoapods.org/": Failed host lookup: 'cocoapods.org'
+    ✗ A network error occurred while checking "https://github.com/": Failed host lookup: 'github.com'
+
+! Doctor found issues in 1 category.
+```
