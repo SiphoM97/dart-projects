@@ -43,5 +43,5 @@ void main() {
   print("modulas: $a % $b = $modulas");
 
   print("$a + $b = $doubleAddition");
-  print("object")
+  print("object");
 }
