@@ -18,25 +18,25 @@ void main() {
 
   */
 
- var pricePerKgs =  3;
- switch (pricePerKgs) {
-  case 1:
-  print("Total price R10");
-  break;
-  case 2:
-  print("Total price R20");
-  break;
-  case 3:
-  print("Total price R30");
-  break;
-  case 4:
-  print("Total price R40");
-  break;
-  case 5:
-  print("Total price R50");
-  break;
-  default:
-  print("The item is out of price range");
-  break;
- }
+  var pricePerKgs = 1;
+  switch (pricePerKgs) {
+    case 1:
+      print("Total price R10");
+      break;
+    case 2:
+      print("Total price R20");
+      break;
+    case 3:
+      print("Total price R30");
+      break;
+    case 4:
+      print("Total price R40");
+      break;
+    case 5:
+      print("Total price R50");
+      break;
+    default:
+      print("The item is out of price range");
+      break;
+  }
 }
