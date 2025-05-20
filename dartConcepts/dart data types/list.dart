@@ -1,4 +1,4 @@
-/* void main() {
+ void main() {
 List<String> Names = ["Azania","Sage","Tshimologo","Mpumi"];
 print("value of names is $Names");
 
@@ -20,8 +20,8 @@ print(Names);
   print(myList); 
 }
 
-*/
 
+/*
 void main() {
 
   List groceries = ["eggs, bread, burgers, lettuce, sausage"]; // normal list nothing fancy.
@@ -38,3 +38,4 @@ void main() {
 
 
 }
+*/
