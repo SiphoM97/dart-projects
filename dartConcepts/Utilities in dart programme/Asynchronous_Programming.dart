@@ -1,7 +1,7 @@
 // Simulating a network request or a long-running operation
 Future<String> fetchUserData() async {
   // Simulate a delay
-  await Future.delayed(Duration(seconds: 2));
+  await Future.delayed(Duration(seconds: 10));
   // Return user data after the delay
   return 'User data retrieved successfully';
 }
